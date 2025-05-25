@@ -1,0 +1,11 @@
+name: display the file content
+on:
+  push:
+    branches: [ "master" ]
+jobs:
+  display-content:
+    runs-on: ostad_runner
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read and display file content
+        run: cat hello.txt
